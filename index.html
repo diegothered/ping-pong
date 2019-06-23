@@ -20,13 +20,15 @@
       <li>Numbers divisable by 5 become "pong"</li>
       <li>Numbers divisable by 15 become "ping pong"</li>
     </ol>
-    <form class="form-inline" id="number">
+    <form class="form-inline" id="input">
       <div class="form-group">
     <label><strong>Enter your number here:</strong></label>
-    <input type="number" class="form-control">
+    <input id="number" type="number" class="form-control" required>
     <button type="submit" class="btn btn-warning">Ping Pong</button>
       </div>
     </form>
+      <div id="result">
+      </div>
     </div>
   </body>
 </html>
