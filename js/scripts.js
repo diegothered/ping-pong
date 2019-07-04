@@ -1,9 +1,7 @@
-var calculate = function(number) {
+  function calculate(input) {
   var pingPong = [];
-
-  for (var i = 0; i <= number ; i++);
-
-   if (i % 15 === 0) {
+  for (var i = 1; i <= input; i++) {
+    if (i % 15 === 0) {
     pingPong.push("ping-pong");
   } else if (i % 5 === 0) {
     pingPong.push("pong");
@@ -11,10 +9,11 @@ var calculate = function(number) {
     pingPong.push("ping");
   } else {
     pingPong.push(i);
-  };
+  }
+}
 
-  return pingPong
-};
+  return pingPong;
+}
 
 
 
@@ -26,11 +25,10 @@ $(document).ready(function() {
     var result = calculate(input);
     console.log(result);
 
+
     result.forEach(function(array) {
-      $("#result").show(array);
-    }) ;
-
-
+      $("#result").append("<li>" + array + "</li>");
+    });
 
   });
 });
